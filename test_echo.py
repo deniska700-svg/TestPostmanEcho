@@ -56,7 +56,7 @@ def test_5_put_methods():
         json={"change": "all"}
     ) 
     
-    assert put_response.status_code == 404
+    assert put_response.status_code == 404 
 
 def test_6_delete_methods():   
     delete_response = requests.delete(f"{BASE_URL}/post") 
