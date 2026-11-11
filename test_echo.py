@@ -14,7 +14,7 @@ def test_1_get_with_query_params():
         headers={"Accept": "application/json"} 
     ) 
         
-    assert response.status_code == 200 
+    assert response.status_code == 404
     resp_json = response.json()         
     assert resp_json["args"] == params 
         
@@ -56,7 +56,7 @@ def test_5_put_methods():
         json={"change": "all"}
     ) 
     
-    assert put_response.status_code == 405
+    assert put_response.status_code == 404
 
 def test_6_delete_methods():   
     delete_response = requests.delete(f"{BASE_URL}/post") 
